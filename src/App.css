@@ -23,9 +23,6 @@ a{
   mix-blend-mode: hue;
 }
 
-  
-
-
 a:before, a:after, span:before, span:after {
       content: '';
       position: absolute;
