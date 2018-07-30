@@ -1,28 +1,60 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+a{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 50px;
+  background: #262626;
+  text-transform: uppercase;
   text-align: center;
+  line-height: 50px;
+  color: #ff0;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: verdana;
+  letter-spacing: 4px;
+  mix-blend-mode: hue;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
-.App-title {
-  font-size: 1.5em;
+a:before, a:after, span:before, span:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff0;
+      transition: 1s;
+      mix-blend-mode: hue;
 }
-
-.App-intro {
-  font-size: large;
+a:before {
+  top: -2px;
+  left: -2px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+a:after{
+  top: -2px;
+  right: -2px;
+}
+ span:before{
+  bottom: -2px;
+  left: -2px;
+}
+ span:after{
+  bottom: -2px;
+  right: -2px;
+}
+a:hover:before,
+a:hover:after,
+a:hover span:before,
+a:hover span:after{
+  width: calc(180px / 2);
+  height: calc(50px / 2);
 }
